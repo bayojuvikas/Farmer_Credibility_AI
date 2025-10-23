@@ -320,4 +320,6 @@ dashboard_display.to_excel(excel_filename, index=False)
 
 with open(excel_filename, "rb") as f:
     st.download_button("⬇️ Download Excel Report", data=f, file_name=excel_filename)
+    st.download_button("⬇️ Download Synthetic Data (ZIP)", data=pd.ExcelWriter("synthetic_data.xlsx").path if False else None, file_name="synthetic_data.zip")
+
 
